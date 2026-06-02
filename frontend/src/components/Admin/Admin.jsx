@@ -15,7 +15,7 @@ const AdminPanel = () => {
   const fetchRestaurants = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/admin/restaurants"
+        "https://food-order-app-beta-pink.vercel.app/api/admin/restaurants"
       );
       const data = await response.json();
 
@@ -33,7 +33,7 @@ const AdminPanel = () => {
   const handleApprove = async (restaurantId) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/admin/restaurants/${restaurantId}/approve`,
+        `https://food-order-app-beta-pink.vercel.app/api/admin/restaurants/${restaurantId}/approve`,
         {
           method: "PUT",
         }
@@ -58,7 +58,7 @@ const AdminPanel = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/admin/restaurants/${restaurantId}/reject`,
+        `https://food-order-app-beta-pink.vercel.app/api/admin/restaurants/${restaurantId}/reject`,
         {
           method: "PUT",
           headers: {

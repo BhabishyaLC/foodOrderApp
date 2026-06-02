@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }) => {
   const fetchUserData = async (token) => {
     try {
       console.log('Fetching user data...');
-      const response = await fetch('http://localhost:5000/api/auth/me', {
+      const response = await fetch('https://food-order-app-beta-pink.vercel.app/api/auth/me', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -121,7 +121,7 @@ export const AuthProvider = ({ children }) => {
   const login = async (email, password) => {
     try {
       console.log('🔄 Attempting login for:', email);
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      const response = await fetch('https://food-order-app-beta-pink.vercel.app/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -160,7 +160,7 @@ export const AuthProvider = ({ children }) => {
   const register = async (userData) => {
     try {
      
-      const response = await fetch('http://localhost:5000/api/auth/register', {
+      const response = await fetch('https://food-order-app-beta-pink.vercel.app/api/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -197,7 +197,7 @@ export const AuthProvider = ({ children }) => {
   const selectRole = async (userId, role) => {
     try {
      
-      const response = await fetch('http://localhost:5000/api/auth/role', {
+      const response = await fetch('https://food-order-app-beta-pink.vercel.app/api/auth/role', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -236,8 +236,8 @@ export const AuthProvider = ({ children }) => {
 
   const submitRestaurantApplication = async (applicationData) => {
     try {
-      console.log('🔄 Submitting restaurant application...');
-      const response = await fetch('http://localhost:5000/api/restaurant/apply', {
+      
+      const response = await fetch('https://food-order-app-beta-pink.vercel.app/api/restaurant/apply', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -333,7 +333,7 @@ const logout = () => {
   
   const googleLogin = () => {
    
-    window.location.href = 'http://localhost:5000/api/auth/google';
+    window.location.href = 'https://food-order-app-beta-pink.vercel.app/api/auth/google';
   };
 
  

@@ -76,7 +76,7 @@ const UserProfile = () => {
 
       console.log("Fetching user profile...");
 
-      const response = await fetch("http://localhost:5000/api/user/profile", {
+      const response = await fetch("https://food-order-app-beta-pink.vercel.app/api/user/profile", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -137,7 +137,7 @@ const UserProfile = () => {
     try {
       setSaving(true);
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:5000/api/user/profile", {
+      const response = await fetch("https://food-order-app-beta-pink.vercel.app/api/user/profile", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -189,8 +189,8 @@ const UserProfile = () => {
     try {
       const token = localStorage.getItem("token");
       const url = editingAddress
-        ? `http://localhost:5000/api/user/address/${editingAddress._id}`
-        : "http://localhost:5000/api/user/address";
+        ? `https://food-order-app-beta-pink.vercel.app/api/user/address/${editingAddress._id}`
+        : "https://food-order-app-beta-pink.vercel.app/api/user/address";
 
       const response = await fetch(url, {
         method: editingAddress ? "PUT" : "POST",
@@ -225,7 +225,7 @@ const UserProfile = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await fetch(
-        `http://localhost:5000/api/user/address/${addressId}`,
+        `https://food-order-app-beta-pink.vercel.app/api/user/address/${addressId}`,
         {
           method: "DELETE",
           headers: { Authorization: `Bearer ${token}` },

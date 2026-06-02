@@ -81,7 +81,7 @@ const handleSubmit = async (e) => {
    
 
     const response = await fetch(
-      "http://localhost:5000/api/restaurant/apply",
+      "https://food-order-app-beta-pink.vercel.app/api/restaurant/apply",
       {
         method: "POST",
         headers: {

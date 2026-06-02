@@ -16,7 +16,7 @@ const AuthSuccess = () => {
         try {
           localStorage.setItem("token", token);
 
-          const response = await fetch("http://localhost:5000/api/auth/me", {
+          const response = await fetch("https://food-order-app-beta-pink.vercel.app/api/auth/me", {
             headers: {
               Authorization: `Bearer ${token}`,
             },

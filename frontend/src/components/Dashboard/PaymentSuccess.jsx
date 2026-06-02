@@ -17,7 +17,7 @@ const PaymentSuccess = () => {
       if (data && orderId) {
         try {
           const token = localStorage.getItem('token');
-          const response = await fetch('http://localhost:5000/api/payment/esewa/verify', {
+          const response = await fetch('https://food-order-app-beta-pink.vercel.app/api/payment/esewa/verify', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

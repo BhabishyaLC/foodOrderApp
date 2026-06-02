@@ -41,7 +41,7 @@ const PaymentMethod = ({
       const token = localStorage.getItem('token');
       
      
-      const orderResponse = await fetch('http://localhost:5000/api/order/create-pending', {
+      const orderResponse = await fetch('https://food-order-app-beta-pink.vercel.app/api/order/create-pending', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ const PaymentMethod = ({
       const pendingOrder = orderData.order;
 
   
-      const paymentResponse = await fetch('http://localhost:5000/api/payment/esewa/initiate', {
+      const paymentResponse = await fetch('https://food-order-app-beta-pink.vercel.app/api/payment/esewa/initiate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

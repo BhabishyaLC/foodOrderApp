@@ -32,7 +32,7 @@ const CheckoutPage = () => {
   const fetchUserProfile = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:5000/api/user/profile", {
+      const response = await fetch("https://food-order-app-beta-pink.vercel.app/api/user/profile", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -49,7 +49,7 @@ const CheckoutPage = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await fetch(
-        `http://localhost:5000/api/order/${orderId}`,
+        `https://food-order-app-beta-pink.vercel.app/api/order/${orderId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -122,7 +122,7 @@ const CheckoutPage = () => {
   try {
     const token = localStorage.getItem('token');
     
-    const response = await fetch('http://localhost:5000/api/order/create', {
+    const response = await fetch('https://food-order-app-beta-pink.vercel.app/api/order/create', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -172,7 +172,7 @@ const CheckoutPage = () => {
       };
 
      
-      const url = orderId ? `http://localhost:5000/api/order/confirm/${orderId}` : 'http://localhost:5000/api/order/create';
+      const url = orderId ? `https://food-order-app-beta-pink.vercel.app/api/order/confirm/${orderId}` : 'https://food-order-app-beta-pink.vercel.app/api/order/create';
       const method = orderId ? 'PUT' : 'POST';
 
       const response = await fetch(url, {

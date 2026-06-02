@@ -32,7 +32,7 @@ const CustomerDashboard = () => {
       
 
       const response = await fetch(
-        "http://localhost:5000/api/restaurant/approved"
+        "https://food-order-app-beta-pink.vercel.app/api/restaurant/approved"
       );
       const data = await response.json();
 
@@ -54,7 +54,7 @@ const CustomerDashboard = () => {
     
 
       const response = await fetch(
-        `http://localhost:5000/api/restaurant/${restaurantId}/menu`
+        `https://food-order-app-beta-pink.vercel.app/api/restaurant/${restaurantId}/menu`
       );
       const data = await response.json();
 
@@ -74,7 +74,7 @@ const CustomerDashboard = () => {
       const token = localStorage.getItem("token");
      
 
-      const response = await fetch("http://localhost:5000/api/order/create", {
+      const response = await fetch("https://food-order-app-beta-pink.vercel.app/api/order/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -161,7 +161,7 @@ const CustomerDashboard = () => {
 
       console.log("Fetching user profile...");
 
-      const response = await fetch("http://localhost:5000/api/user/profile", {
+      const response = await fetch("https://food-order-app-beta-pink.vercel.app/api/user/profile", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
